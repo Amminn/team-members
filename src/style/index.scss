@@ -1,0 +1,171 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px; /* 10px == 1rem */
+}
+
+body {
+  overflow-x: hidden !important;
+}
+
+.nav-bar {
+  background-color: rgb(231, 231, 231);
+  width: 100%;
+  height: 6rem;
+  margin-bottom: 2rem;
+
+  ul {
+    list-style-type: none;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+
+    a {
+      font-size: 1.4rem;
+      color: black;
+    }
+
+    a.first {
+      margin-right: 0.7rem;
+    }
+  }
+}
+
+.not-found {
+  color: rgb(219, 65, 26);
+  text-align: center;
+}
+
+header {
+  text-align: center;
+  margin: 3rem;
+  padding-top: 3rem;
+  
+  h1 {
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+}
+
+.main {
+  min-height: 60vh;
+
+  .form-selection  {
+    margin-bottom: 4rem;
+
+    select {
+      width: 60%;
+      display: block;
+      margin-inline: auto;
+      padding: 1.5rem 0.5rem;
+      border: 1px solid black;
+      border-radius: 5px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 1.2px;
+    }
+    
+    option {
+      line-height: 2rem;
+      font-size: 1.3rem;
+      font-weight: 500;
+      letter-spacing: 1.2px;
+      margin-bottom: 1.4rem;
+    }
+  }
+
+  .team {
+    margin-bottom: 1rem;
+    text-align: center;
+    background-color: rgb(203, 233, 243);
+    padding: 1.5rem 0.6rem;
+    border-radius: 5px;
+
+    .hidden-part {
+      display: none;
+
+      h2 {
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid gray;
+      }
+      
+      h3 {
+        margin-bottom: 0.5rem;
+        span {
+          font-weight: normal;
+        }
+      }
+
+      &.selected {
+        display: block;
+        margin-top: 1rem;
+      }
+    }
+
+  }
+}
+
+.main .grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  grid-gap: 1rem;
+  justify-items: center;
+}
+
+.card {
+  width: 30rem;
+  height: 35rem;
+  border: 1px solid rgb(63, 63, 63);
+  border-radius: 5px;
+  box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.315);
+  cursor: pointer;
+  &.selected {
+    border: 4px solid rgb(0, 177, 0)
+  }
+  .profile-pic {
+    max-width: 100%;
+    img {
+      display: block;
+      width: 100%;
+      max-height: 28rem;
+      object-fit: cover;
+      border-radius: 5px 5px 0 0;
+    }
+  }
+
+  .description {
+    padding: 1.2rem 1.5rem;
+
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: .7rem;
+    }
+    p {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
